@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+
+	<div class="block">
+		<input type="radio" id="btn-1" class="none" name="toggle" checked>
+		<input type="radio" id="btn-2" class="none" name="toggle">
+		<input type="radio" id="btn-3" class="none" name="toggle">
+		<input type="radio" id="btn-4" class="none" name="toggle">
+		<div class="navigator">
+			<label for="btn-1" class="grow-rotate">Главная</label>
+			<label for="btn-2" class="grow-rotate">Обо мне</label>
+			<label for="btn-3" class="grow-rotate">Работы</label>
+			<label for="btn-4" class="grow-rotate">Связь</label>
+			<a href="https://github.com/anton-melnik" class="github"></a>
+		</div>
+
+		<div class="main">
+			<div class="content">
+				<h2 class="main-title">Привет, я Антон. <br><span class="main-span">Начинающий веб-разработчик.</span></h2>
+				<div class="logo  turn"></div>
+				<p class="copyright">© 2016 anton-melnik</p> 
+			</div>
+		</div>
+
+		<div class="about">
+			<div class="content">
+				<p class="text">Верстаю, изучаю JavaScript. Опыт чуть меньше года.</p>
+				<ul class="about-list">
+					<li>HTML5/CSS3</li>
+					<li>Резина/Адаптив</li>
+					<li>Семантика</li>
+					<li>LESS</li>
+					<li>GIT</li>
+					<li>Кроссбраузерность</li>
+					<li>БЭМ/АНБ</li>
+					<li>Progressive Enhancement/Graceful Degradation</li>
+					<li>Photoshop/Avocode</li>
+				</ul>
+				<p class="copyright">© 2016 anton-melnik</p> 
+			</div>
+		</div>
+
+		<div class="work">
+			<div class="content">
+				<p class="text">Код на <a class="gh-link" href="https://github.com/anton-melnik">гитхабе.</a></p>
+
+				<div>
+					<a href="https://anton-melnik.github.io/alisayed/" class="link"><img src="img/alis.png" alt="link"></a>
+					<a href="https://anton-melnik.github.io/lookshop/" class="link"><img src="img/lookshop.png" alt="link"></a>
+					<a href="https://anton-melnik.github.io/nerds/" class="link"><img src="img/nerds.png" alt="link"></a>
+					<a href="#" class="link"><img src="img/barbershop.png" alt="link"></a>
+				</div>
+				<p class="copyright">© 2016 anton-melnik</p> 
+			</div>
+		</div>
+
+		<div class="contacts">
+			<div class="content">
+				<form action="https://formspree.io/your@email.com" method="POST">
+					<label for="name" class="text">Имя:</label><br>
+					<input type="text" id="name" class="name" name="name" placeholder="Ваше имя" required>
+
+					<label for="email" class="text">Почта:</label>
+					<input type="email" id="email" class="email" name="_replyto" placeholder="Почта для ответа" required>
+					
+					<label for="posst" class="text">Сообщение:</label>
+					<textarea  class="post-text" name="post-text" id="post" rows="5" placeholder="Обратная связь пока не работает, пишите на мыло, оно правее."></textarea>
+					<input type="submit" class="btn" value="Отправить">
+				</form>
+
+				<p class="email-info"><b>email:</b> anton09melnik@gmail.com</p>
+				<p class="copyright">© 2016 anton-melnik</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+body {
+	font-family: "Roboto", "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #1b3544;
+	background: #e6eaed;
+	font-weight: 400;
+	min-width: 640px; //тест резина
+}
+
+.block {
+	padding-top: 70px;
+}
+
+.none {
+	display: none;
+}
+
+.navigator {
+	width: 700px;
+	min-width: 460px;
+	margin: 0 auto;
+	animation: bounce 0.6s;
+	position: relative;
+}
+
+.grow-rotate {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+
+  padding: 14px 20px;
+  border: 1px solid #359173;
+  margin-right: 13px;
+  cursor: pointer;
+  background: white;
+  z-index: 23;
+  margin-bottom: -23px;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.grow-rotate:hover, 
+.grow-rotate:focus, 
+.grow-rotate:active {
+  -webkit-transform: scale(1.1) rotate(4deg);
+  transform: scale(1.1) rotate(4deg);
+  /* background: #359173;
+  color: white; */
+}
+
+#btn-1:checked ~ .navigator label[for="btn-1"],
+#btn-2:checked ~ .navigator label[for="btn-2"],
+#btn-3:checked ~ .navigator label[for="btn-3"],
+#btn-4:checked ~ .navigator label[for="btn-4"] {
+  -webkit-transform: scale(1.1) rotate(4deg);
+  transform: scale(1.1) rotate(4deg);
+  background: #359173;
+  color: white;
+  cursor: default;
+} 
+
+#btn-1:checked ~ .main,
+#btn-2:checked ~ .about,
+#btn-3:checked ~ .work,
+#btn-4:checked ~ .contacts {
+  display: block;
+} 
+
+.github {
+	position: absolute;
+	top: 5px;
+	right: -20px;
+	width: 38.5px;
+	height: 38.5px;
+	background: white url(img/git.png) center no-repeat;
+	z-index: 6;
+	box-shadow: 0 0 13px rgba(0,0,0,0.5);
+	border-radius: 50%;
+	border: 1px solid #359173;
+}
+
+.github:hover {
+	background: #359173 url(img/git-hover.png) center no-repeat;
+}
+
+/* @keyframes showBlock{
+  0% {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    height: 2px;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    height: 600px;
+  }
+} */
+
+@keyframes bounce {
+  0%   { transform: translateY(-2000px); }
+  70%  { transform: translateY(30px);    }
+  90%  { transform: translateY(-15px);   }
+  100% { transform: translateY(0);       }
+}
+
+@keyframes showBlock {
+  0%{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  1%{
+    display: block;
+    height: 2px;
+  }
+  100%{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.main,
+.about,
+.work,
+.contacts {
+	width: 700px;
+	min-width: 360px;
+	margin: 0 auto;
+	border: 1px solid #359173;
+	animation: showBlock 0.5s 0.5s ease-in-out both;
+	z-index: 1;
+	display: none;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 60px;
+	box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+	background: white;
+	position: relative;
+}
+
+@keyframes showContent{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.content {
+	animation: showContent 0.9s 0.9s ease-in-out both;
+}
+
+.main {
+	height: 400px;
+}
+
+.main-title {
+	font-weight: 400;
+	margin-top: 120px;
+	margin-bottom: 200px;
+}
+
+.main-span {
+	font-weight: 300;
+	color: grey;
+	line-height: 40px;
+}
+
+.copyright {
+	position: absolute;
+	right: 10px;
+	bottom: -60px;
+	color: grey;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.turn {
+-moz-transition: all 0.5s 0.1s ease-in;
+-o-transition: all 0.5s 0.1s ease-in;
+-webkit-transition: all 0.5s 0.1s ease-in;
+}
+
+.turn:hover {
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+}
+
+.logo {
+	width: 180px;
+	height: 180px;
+	background: white url(img/face.png) center no-repeat;
+	position: absolute;
+	top: 120px;
+	right: 80px;
+	border-radius: 50%;
+	border: 2px solid #359173;
+	box-shadow: 0 0 13px rgba(0,0,0,0.5);
+}
+
+.about {
+	height: 385px;
+}
+
+.text {
+	font-weight: 400;
+	font-size: 17px;
+}
+
+.about-list {
+	margin-top: 40px;
+}
+
+.about-list li {
+	color: #32556a;
+	margin-bottom: 10px;
+	list-style: none;
+	position: relative;
+}
+
+.about-list li:before {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	content: "";
+	background: #359173;
+	transform: rotate(45deg);
+	left: -23px;
+	top: 3px;
+}
+
+.work {
+	height: 600px;
+}
+
+.gh-link {
+	color: #359173;
+}
+
+.gh-link:hover {
+	color: grey;
+}
+
+.link {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0;
+	margin-right: 46px;
+	margin-top: 30px;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+	position: relative;
+}
+
+.link:before {
+	content: "перейти";
+	position: absolute;
+	font-size: 25px;
+	font-weight: 900;
+	color: #359173;
+	top: 80px;
+	left: 50px;
+	display: none;
+}
+
+.link:hover img {
+	opacity: 0.2;
+}
+
+.link:hover:before {
+	display: block;
+}
+
+.link img {
+	width: 100%;
+}
+
+.link:nth-child(3) {
+	margin-right: 0;
+}
+
+.contacts {
+	height: 470px;
+}
+
+.email-info {
+	position: absolute;
+	right: 50px;
+	bottom: 38px;
+	font-weight: 400;
+	font-size: 17px;
+}
+
+form {
+	width: 300px;
+	margin-top: 10px;
+}
+
+.name,
+.email {
+	width: 300px;
+	padding: 15px 20px;
+	border: 1px solid #359173;
+	margin-bottom: 30px;
+	font-family: "Roboto", "Arial", sans-serif;
+}
+
+#post {
+	width: 300px;
+	height: 100px;
+	border: 1px solid #359173;
+	padding: 15px 20px;
+	font-family: "Roboto", "Arial", sans-serif;
+}
+
+.btn {
+	display: block;
+	background: white;
+	border: 1px solid #359173;
+	margin-top: 20px;
+	width: 95px;
+	height: 40px;	
+	cursor: pointer;
+	font-family: "Roboto", "Arial", sans-serif;
+}
+
+.btn:hover {
+	background: #359173;
+	color: white;
+}
+
+/* @media(max-width: 810px) {
+	.main,
+	.about,
+	.work,
+	.contacts {
+		width: 640px;
+	}
+	
+	.link:nth-child(3) {
+		margin-right: 45;
+	}
+
+	.navigator {
+		width: 640px;
+	}
+} */
